@@ -37,15 +37,15 @@ const SignUp = () => {
         nickname,
         password
       })
-        .then((response)=>{ // 성공 단계
+        .then((response)=>{ 
           console.log(response);
           setSignUpSuccess(true);
         })
-        .catch((error)=>{ // 실패 단계
+        .catch((error)=>{ 
           console.log(error.response);
           setSignUpError(error.response.data); 
         })
-        .finally(()=>{}); // finally 성공하던 실패하던 무조건 이 코드는 또 실행됨. try catch 문에도 생김!
+        .finally(()=>{});
     }
   }, 
   [email, nickname, password, passwordCheck, mismatchError]);
