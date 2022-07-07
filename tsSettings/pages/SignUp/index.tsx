@@ -29,7 +29,7 @@ const SignUp = () => {
     e.preventDefault();
     if(!mismatchError && nickname){
       console.log('서버로 회원가입 하기')
-      setSignUpError(''); // (로딩 단계) 아래와 같이 비동기 요청 하기전에 초기화를 해주는 것이 좋음
+      setSignUpError(''); // (로딩 단계) 각 요청별로 다른 응답을 보여줘야 하면, 아래와 같이 비동기 요청 하기전에 초기화를 해주는 것이 좋음
       setSignUpSuccess(false); // 마찬가지로 초기화!
       // axios.post('http://localhost:3095/api/users', { // localhost:3090 -> :3095 에게 보내는 것
       axios.post('/api/users', { // localhost:3095 -> localhost:3095 에게 보낸 것처럼 됨
